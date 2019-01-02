@@ -1,0 +1,336 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3EB89DB9-B251-40A7-A55C-6960AFE1E148}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JRTA</RootNamespace>
+    <AssemblyName>JRTA</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>3.1</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.html" />
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="css\base.css" />
+    <Content Include="css\font-awesome\css\font-awesome.css" />
+    <Content Include="css\font-awesome\css\font-awesome.min.css" />
+    <Content Include="css\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="css\fonts.css" />
+    <Content Include="css\main.css" />
+    <Content Include="css\micons\fonts\icomoon.svg" />
+    <Content Include="css\micons\micons.css" />
+    <Content Include="css\vendor.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="images\avatars\user-01.jpg" />
+    <Content Include="images\avatars\user-02.jpg" />
+    <Content Include="images\avatars\user-03.jpg" />
+    <Content Include="images\avatars\user-04.jpg" />
+    <Content Include="images\avatars\user-05.jpg" />
+    <Content Include="images\clients\apple.png" />
+    <Content Include="images\clients\atom.png" />
+    <Content Include="images\clients\blackberry.png" />
+    <Content Include="images\clients\dropbox.png" />
+    <Content Include="images\clients\envato.png" />
+    <Content Include="images\clients\firefox.png" />
+    <Content Include="images\clients\joomla.png" />
+    <Content Include="images\clients\magento.png" />
+    <Content Include="images\clients\mozilla.png" />
+    <Content Include="images\clients\redhat.png" />
+    <Content Include="images\clients\ubuntu.png" />
+    <Content Include="images\clients\wordpress.png" />
+    <Content Include="images\contact-bg.jpg" />
+    <Content Include="images\email-icon.png" />
+    <Content Include="images\FPF-2.jpg" />
+    <Content Include="images\Gallery\0005.jpg" />
+    <Content Include="images\Gallery\0013.JPG" />
+    <Content Include="images\Gallery\002.jpg" />
+    <Content Include="images\Gallery\003.JPG" />
+    <Content Include="images\Gallery\004.jpg" />
+    <Content Include="images\Gallery\0055.jpg" />
+    <Content Include="images\Gallery\005a.jpg" />
+    <Content Include="images\Gallery\010-01a.jpg" />
+    <Content Include="images\Gallery\022-01a.jpg" />
+    <Content Include="images\Gallery\041.JPG" />
+    <Content Include="images\Gallery\049.JPG" />
+    <Content Include="images\Gallery\052.JPG" />
+    <Content Include="images\Gallery\058.JPG" />
+    <Content Include="images\Gallery\FGKQ4817.jpg" />
+    <Content Include="images\Gallery\IMG_0937.JPG" />
+    <Content Include="images\Gallery\IMG_0951.JPG" />
+    <Content Include="images\Gallery\IMG_1109.JPG" />
+    <Content Include="images\Gallery\IMG_1216.JPG" />
+    <Content Include="images\Gallery\IMG_1385.JPG" />
+    <Content Include="images\Gallery\IMG_1404.JPG" />
+    <Content Include="images\Gallery\IMG_1753.JPG" />
+    <Content Include="images\Gallery\IMG_1754.JPG" />
+    <Content Include="images\Gallery\IMG_1755.JPG" />
+    <Content Include="images\Gallery\IMG_1846.JPG" />
+    <Content Include="images\Gallery\IMG_2022.JPG" />
+    <Content Include="images\Gallery\IMG_2154.JPG" />
+    <Content Include="images\Gallery\IMG_2237.JPG" />
+    <Content Include="images\Gallery\IMG_2492.JPG" />
+    <Content Include="images\Gallery\IMG_2494.JPG" />
+    <Content Include="images\Gallery\IMG_2533.JPG" />
+    <Content Include="images\Gallery\IMG_2535.JPG" />
+    <Content Include="images\Gallery\IMG_2538.JPG" />
+    <Content Include="images\Gallery\IMG_2562.JPG" />
+    <Content Include="images\Gallery\IMG_2569.JPG" />
+    <Content Include="images\Gallery\IMG_2601.JPG" />
+    <Content Include="images\Gallery\IMG_2602.JPG" />
+    <Content Include="images\Gallery\IMG_2895.JPG" />
+    <Content Include="images\Gallery\IMG_3079.JPG" />
+    <Content Include="images\Gallery\JRTAamp.jpg" />
+    <Content Include="images\Gallery\TCAX1885.jpg" />
+    <Content Include="images\Gallery\timber side cheeks.jpg" />
+    <Content Include="images\hero-bg.jpg" />
+    <Content Include="images\JeanRiettelogo.png" />
+    <Content Include="images\JRN-02.jpg" />
+    <Content Include="images\JRTApngwhite.png" />
+    <Content Include="images\left-arrow.png" />
+    <Content Include="images\jrlogo.png" />
+    <Content Include="images\logo-footer.png" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\logojrred.png" />
+    <Content Include="images\logojrwhite.png" />
+    <Content Include="images\MPF4.jpg" />
+    <Content Include="images\photoswipe\default-skin.png" />
+    <Content Include="images\photoswipe\default-skin.svg" />
+    <Content Include="images\photoswipe\preloader.gif" />
+    <Content Include="images\portfolio\gallery\g-beetle.jpg" />
+    <Content Include="images\portfolio\gallery\g-grow-green.jpg" />
+    <Content Include="images\portfolio\gallery\g-guitarist.jpg" />
+    <Content Include="images\portfolio\gallery\g-palmeira.jpg" />
+    <Content Include="images\portfolio\gallery\g-shutterbug.jpg" />
+    <Content Include="images\portfolio\gallery\g-woodcraft.jpg" />
+    <Content Include="images\portfolio\grow-green%402x.jpg" />
+    <Content Include="images\portfolio\grow-green.jpg" />
+    <Content Include="images\portfolio\guitarist%402x.jpg" />
+    <Content Include="images\portfolio\guitarist.jpg" />
+    <Content Include="images\portfolio\lady-shutterbug%402x.jpg" />
+    <Content Include="images\portfolio\lady-shutterbug.jpg" />
+    <Content Include="images\portfolio\palmeira%402x.jpg" />
+    <Content Include="images\portfolio\palmeira.jpg" />
+    <Content Include="images\portfolio\the-beetle%402x.jpg" />
+    <Content Include="images\portfolio\the-beetle.jpg" />
+    <Content Include="images\portfolio\woodcraft%402x.jpg" />
+    <Content Include="images\portfolio\woodcraft.jpg" />
+    <Content Include="images\right-arrow.png" />
+    <Content Include="images\S-backdrop.jpg" />
+    <Content Include="images\sample-image.jpg" />
+    <Content Include="images\wheel-1000.jpg" />
+    <Content Include="images\wheel-2000.jpg" />
+    <Content Include="images\wheel-500.jpg" />
+    <Content Include="inc\sendEmail.php" />
+    <Content Include="index.html" />
+    <Content Include="js\jquery-3.2.1.min.js" />
+    <Content Include="js\main.js" />
+    <Content Include="js\modernizr.js" />
+    <Content Include="js\pace.min.js" />
+    <Content Include="js\plugins.js" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\esm\popper-utils.js" />
+    <Content Include="Scripts\esm\popper-utils.min.js" />
+    <Content Include="Scripts\esm\popper.js" />
+    <Content Include="Scripts\esm\popper.min.js" />
+    <Content Include="Scripts\esm\popper.min.js.map" />
+    <Content Include="Scripts\esm\popper.js.map" />
+    <Content Include="Scripts\esm\popper-utils.min.js.map" />
+    <Content Include="Scripts\esm\popper-utils.js.map" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
+    <Content Include="Scripts\jquery-3.0.0.js" />
+    <Content Include="Scripts\jquery-3.0.0.min.js" />
+    <Content Include="Scripts\jquery-3.0.0.slim.js" />
+    <Content Include="Scripts\jquery-3.0.0.slim.min.js" />
+    <Content Include="Scripts\popper-utils.js" />
+    <Content Include="Scripts\popper-utils.min.js" />
+    <Content Include="Scripts\popper.js" />
+    <Content Include="Scripts\popper.min.js" />
+    <Content Include="Scripts\umd\popper-utils.js" />
+    <Content Include="Scripts\umd\popper-utils.min.js" />
+    <Content Include="Scripts\umd\popper.js" />
+    <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="css\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="css\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="css\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="css\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="css\micons\fonts\icomoon.eot" />
+    <Content Include="css\micons\fonts\icomoon.ttf" />
+    <Content Include="css\micons\fonts\icomoon.woff" />
+    <Content Include="fonts\lora\lora-bold-webfont.ttf" />
+    <Content Include="fonts\lora\lora-bold-webfont.woff" />
+    <Content Include="fonts\lora\lora-bold-webfont.woff2" />
+    <Content Include="fonts\lora\lora-bolditalic-webfont.woff" />
+    <Content Include="fonts\lora\lora-bolditalic-webfont.woff2" />
+    <Content Include="fonts\lora\lora-italic-webfont.ttf" />
+    <Content Include="fonts\lora\lora-italic-webfont.woff" />
+    <Content Include="fonts\lora\lora-italic-webfont.woff2" />
+    <Content Include="fonts\lora\lora-regular-webfont.woff" />
+    <Content Include="fonts\lora\lora-regular-webfont.woff2" />
+    <Content Include="fonts\montserrat\montserrat-black-webfont.woff" />
+    <Content Include="fonts\montserrat\montserrat-black-webfont.woff2" />
+    <Content Include="fonts\montserrat\montserrat-bold-webfont.woff" />
+    <Content Include="fonts\montserrat\montserrat-bold-webfont.woff2" />
+    <Content Include="fonts\montserrat\montserrat-extrabold-webfont.woff" />
+    <Content Include="fonts\montserrat\montserrat-extrabold-webfont.woff2" />
+    <Content Include="fonts\montserrat\montserrat-extralight-webfont.woff" />
+    <Content Include="fonts\montserrat\montserrat-extralight-webfont.woff2" />
+    <Content Include="fonts\montserrat\montserrat-light-webfont.woff" />
+    <Content Include="fonts\montserrat\montserrat-light-webfont.woff2" />
+    <Content Include="fonts\montserrat\montserrat-medium-webfont.woff" />
+    <Content Include="fonts\montserrat\montserrat-medium-webfont.woff2" />
+    <Content Include="fonts\montserrat\montserrat-regular-webfont.woff" />
+    <Content Include="fonts\montserrat\montserrat-regular-webfont.woff2" />
+    <Content Include="fonts\montserrat\montserrat-semibold-webfont.woff" />
+    <Content Include="fonts\montserrat\montserrat-semibold-webfont.woff2" />
+    <Content Include="fonts\montserrat\montserrat-thin-webfont.woff" />
+    <Content Include="fonts\montserrat\montserrat-thin-webfont.woff2" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.0.0.slim.min.map" />
+    <Content Include="Scripts\jquery-3.0.0.min.map" />
+    <Content Include="Scripts\umd\popper.min.js.map" />
+    <Content Include="Scripts\umd\popper.js.map" />
+    <Content Include="Scripts\umd\popper-utils.min.js.map" />
+    <Content Include="Scripts\umd\popper-utils.js.map" />
+    <Content Include="Scripts\README.md" />
+    <Content Include="Scripts\popper.min.js.map" />
+    <Content Include="Scripts\popper.js.map" />
+    <Content Include="Scripts\popper-utils.min.js.map" />
+    <Content Include="Scripts\popper-utils.js.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Scripts\index.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>61300</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:61300/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
